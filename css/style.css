@@ -1,0 +1,523 @@
+:root {
+    --main-theme-color: #750dfd;
+    --second-theme-color: #0c64a5;
+
+  }
+  
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: #1d1d1d;
+    color: white;
+
+}
+
+/* Header */
+
+#profile {
+    display: none;
+    padding-bottom: 15px;
+}
+
+#header {
+    background-image: url("../images/zero&one.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header-gradient {
+    height: 100%;
+    background: linear-gradient(150deg, rgba(0,0,0,0.7) 33%, rgba(88, 31, 31, 0.3) 50%, rgba(255, 255, 255, 0) 100%); 
+}
+
+h1 {
+    font-size: 5.5vw;
+    font-weight: bold;
+    line-height: 1.1em;
+    color: white;
+    text-shadow: 5px 5px var(--main-theme-color);
+}
+
+#avy-container {
+    position: absolute;
+    z-index: 25;
+    top: 10vh;
+    right: 10vh;
+    width: 75vh;
+    height: 75vh;
+    border: 2px inset var(--main-theme-color);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.avy {
+    position: relative;
+    top: -33%;
+}
+
+.mini-header-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+#mini-avy-container {
+    border: 2px inset var(--main-theme-color);
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+  
+.title {
+    color: white;
+    font-size: 3.5vw;
+    padding: 10px;
+    text-shadow: 3px 3px var(--main-theme-color);
+}
+
+/* Navigation */
+
+#nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99;
+    top: 25%;
+    left: -150px;
+}
+
+#nav a {
+    position: relative;
+    left: 0;
+    margin-bottom: 5px;
+    padding: 15px;
+    width: 145px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background: rgb(48,184,255);
+    background: linear-gradient(150deg, rgb(30, 88, 236) 0%, rgba(65, 172, 243, 0.979) 35%, rgba(33, 233, 240, 0.23) 100%); 
+    border-radius: 0 5px 5px 0;
+    transition: left 0.7s;
+  }
+  
+#nav a:hover {
+    left: 150px;
+}
+
+.icon {
+    position: absolute;
+    right: -5px;
+}
+
+#mini-nav {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#mini-nav > a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+/* Music */
+
+#music-player {
+    display: none;
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    text-align: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+    background-color: #181818;
+    padding-bottom: 5px;
+    transition: left 1s;
+}
+
+#music-icon {
+    position: relative;
+    left: 5px;
+}
+
+#music-player:hover {
+    left: 0;
+}
+
+#music-info {
+    font-size: xx-small;
+}
+
+/* Main */
+
+section {
+    padding: 25px 15px;
+}
+
+footer {
+    padding: 0 20px;
+}
+
+h2, h3 {
+    font-weight: bold;
+    padding: 25px 0;
+}
+
+/* About section */
+
+#about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about-container > div {
+    min-width: 45%;
+    padding: 20px;
+}
+
+#about-container > div:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+
+#about-info {
+    background-color: var(--main-theme-color);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.3em;
+    box-shadow: 7px 10px 5px black;
+}
+
+#type-writer {
+    color: var(--main-theme-color);
+}
+
+.png-container {
+    display: flex;
+    margin-top: 50px;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.png-icon {
+    max-width: 100px;
+}
+
+
+/* Technologie section */
+
+svg {
+    width: 50px;
+    height: 50px;
+}
+
+#techno-p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+
+  .flip-card-front {
+    background-color: var(--main-theme-color);
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+/* Warhammer section */
+
+#warhammer { 
+    display: none;
+    background-color: var(--main-theme-color);
+}
+
+.wh-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    background-color: var(--main-theme-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.wh-container > div {
+    text-align: center;
+    resize: horizontal;
+    overflow: hidden;
+}
+
+#wh-info {
+    min-width: 200px;
+    padding: 25px;
+    width: 10%;
+    line-height: 1.1em;
+}
+
+#wh-game {
+    min-width: 300px;
+    width: 90%;
+    box-shadow: 7px 10px 5px black;
+}
+
+.btn-container {
+    padding: 25px 0;
+}
+
+.btn-container > a {
+    padding: 25px 0;
+    color: black;
+}
+
+#primarch-game {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+
+#contact {
+    padding: 50px;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-form {
+    background-color: var(--main-theme-color);
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+    box-shadow: 7px 10px 5px black;
+}
+
+#form-sent {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: var(--main-theme-color);
+    border-radius: 10px;
+    padding: 10px;
+    transform: scale(0);
+    transition: all 1s ease-in;
+    box-shadow: 7px 10px 5px black;
+}
+
+fieldset{
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-textarea {
+    padding: 10px;
+    min-width: 250px;
+    min-height: 100px;
+}
+
+.form-submit-btn {
+    min-width: 100px;
+    padding: 10px;
+    border: 2px outset white;
+    border-radius: 10px;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+.form-submit-btn:hover {
+    border-style: inset;
+}
+
+#error-notification {
+    color: #cc0000;
+    font-size: large;
+}
+
+#contact-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contact-container > a {
+    text-decoration: none;
+}
+
+#contact-container > a > svg { 
+    fill: var(--main-theme-color);
+}
+
+#contact-container > a:hover svg { 
+    fill: var(--second-theme-color);
+}
+
+
+@media only screen and (min-width: 700px) {
+
+    #header, section, #contact {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #mini-nav {
+        display: none;
+    }
+
+    #about-container  {
+        flex-direction: row;
+    }
+
+    section {
+        padding: 50px;
+       
+    }
+
+    #warhammer {
+        padding-top: 0;
+    } 
+
+
+    h1, .title {
+        padding: 50px 0 0 50px;
+    }
+
+    #profile, #warhammer {
+        display: block;
+    }
+
+    .mini-header-card {
+        display: none;
+    }
+
+    #nav, #music-player {
+        display: flex;
+    }
+
+  }
+
+
+@media only screen and (max-width: 750px) {
+
+    #warhammer, #warhammerNav {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    .flip-card {
+        height: 130px;
+        width: 130px;
+    }
+
+    svg {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+    #avy-container {
+        width: 50vh;
+        height: 50vh;
+    }
+}
+
+@media screen and ( max-height: 350px ){
+    #header, section, #contact {
+        height: auto;
+    }
+
+    #nav a {
+        padding: 3px 15px;
+    }
+}
